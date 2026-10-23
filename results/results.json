@@ -1,0 +1,634 @@
+{
+  "dataset": {
+    "rows": 600,
+    "ceiling_100": 18,
+    "csv_risk_lt50": 12,
+    "risk_counts": {
+      "50": 12,
+      "55": 28,
+      "60": 55,
+      "65": 107,
+      "70": 159
+    },
+    "mean_score": 77.62716666666667,
+    "corr": {
+      "previous_score": 0.557,
+      "study_hours": 0.542,
+      "assignments_completed": 0.346,
+      "attendance_pct": 0.239,
+      "sleep_hours": 0.216,
+      "internet_access": 0.061
+    },
+    "linear_coef": {
+      "previous_score": {
+        "Points per unit": 0.352,
+        "Points per 1 std dev": 6.952
+      },
+      "study_hours": {
+        "Points per unit": 3.107,
+        "Points per 1 std dev": 6.693
+      },
+      "assignments_completed": {
+        "Points per unit": 1.215,
+        "Points per 1 std dev": 3.826
+      },
+      "attendance_pct": {
+        "Points per unit": 0.186,
+        "Points per 1 std dev": 3.013
+      },
+      "sleep_hours": {
+        "Points per unit": 1.408,
+        "Points per 1 std dev": 2.03
+      },
+      "internet_access": {
+        "Points per unit": 1.892,
+        "Points per 1 std dev": 0.946
+      }
+    },
+    "linear_intercept": 12.208634678522913
+  },
+  "regression": {
+    "best": "Linear Regression",
+    "results": [
+      {
+        "Model": "Linear Regression",
+        "CV MAE (lower is better)": 4.6952,
+        "Test MAE": 4.7236,
+        "Test RMSE": 6.122,
+        "Test R\u00b2": 0.7906
+      },
+      {
+        "Model": "Ridge (L2)",
+        "CV MAE (lower is better)": 4.6965,
+        "Test MAE": 4.7213,
+        "Test RMSE": 6.12,
+        "Test R\u00b2": 0.7907
+      },
+      {
+        "Model": "Lasso (L1)",
+        "CV MAE (lower is better)": 4.7117,
+        "Test MAE": 4.7052,
+        "Test RMSE": 6.1154,
+        "Test R\u00b2": 0.791
+      },
+      {
+        "Model": "Polynomial Regression (degree 2)",
+        "CV MAE (lower is better)": 4.7123,
+        "Test MAE": 4.8044,
+        "Test RMSE": 6.2291,
+        "Test R\u00b2": 0.7832
+      },
+      {
+        "Model": "SVM (RBF)",
+        "CV MAE (lower is better)": 5.4532,
+        "Test MAE": 4.8877,
+        "Test RMSE": 6.3784,
+        "Test R\u00b2": 0.7727
+      },
+      {
+        "Model": "Random Forest Regressor",
+        "CV MAE (lower is better)": 5.6744,
+        "Test MAE": 5.2613,
+        "Test RMSE": 6.8208,
+        "Test R\u00b2": 0.74
+      },
+      {
+        "Model": "Decision Tree Regressor",
+        "CV MAE (lower is better)": 7.1675,
+        "Test MAE": 6.3849,
+        "Test RMSE": 8.1697,
+        "Test R\u00b2": 0.6271
+      },
+      {
+        "Model": "Baseline (predict the mean)",
+        "CV MAE (lower is better)": 10.2072,
+        "Test MAE": 10.9548,
+        "Test RMSE": 13.3785,
+        "Test R\u00b2": -0.0001
+      }
+    ],
+    "n_train": 480,
+    "n_test": 120,
+    "residual_mean": 0.06571617184092612,
+    "residual_std": 6.121606638183385,
+    "stability": [
+      {
+        "Model": "Linear Regression",
+        "Test MAE (mean \u00b1 std)": "4.661 \u00b1 0.258",
+        "Test R\u00b2 (mean \u00b1 std)": "0.793 \u00b1 0.025"
+      },
+      {
+        "Model": "Ridge (L2)",
+        "Test MAE (mean \u00b1 std)": "4.662 \u00b1 0.259",
+        "Test R\u00b2 (mean \u00b1 std)": "0.793 \u00b1 0.025"
+      },
+      {
+        "Model": "Lasso (L1)",
+        "Test MAE (mean \u00b1 std)": "4.670 \u00b1 0.264",
+        "Test R\u00b2 (mean \u00b1 std)": "0.793 \u00b1 0.024"
+      },
+      {
+        "Model": "Polynomial Regression (degree 2)",
+        "Test MAE (mean \u00b1 std)": "4.737 \u00b1 0.260",
+        "Test R\u00b2 (mean \u00b1 std)": "0.788 \u00b1 0.026"
+      },
+      {
+        "Model": "SVM (RBF)",
+        "Test MAE (mean \u00b1 std)": "5.112 \u00b1 0.382",
+        "Test R\u00b2 (mean \u00b1 std)": "0.750 \u00b1 0.042"
+      },
+      {
+        "Model": "Random Forest Regressor",
+        "Test MAE (mean \u00b1 std)": "5.475 \u00b1 0.381",
+        "Test R\u00b2 (mean \u00b1 std)": "0.727 \u00b1 0.046"
+      },
+      {
+        "Model": "Decision Tree Regressor",
+        "Test MAE (mean \u00b1 std)": "7.038 \u00b1 0.457",
+        "Test R\u00b2 (mean \u00b1 std)": "0.544 \u00b1 0.057"
+      },
+      {
+        "Model": "Baseline (predict the mean)",
+        "Test MAE (mean \u00b1 std)": "10.357 \u00b1 0.510",
+        "Test R\u00b2 (mean \u00b1 std)": "-0.010 \u00b1 0.012"
+      }
+    ]
+  },
+  "classification": {
+    "best": "Logistic Regression",
+    "results": [
+      {
+        "Model": "Logistic Regression",
+        "CV F1": 0.738,
+        "Test Accuracy": 0.9417,
+        "Precision": 0.75,
+        "Recall": 0.5455,
+        "F1-score": 0.6316
+      },
+      {
+        "Model": "Linear SVM",
+        "CV F1": 0.7321,
+        "Test Accuracy": 0.9417,
+        "Precision": 0.75,
+        "Recall": 0.5455,
+        "F1-score": 0.6316
+      },
+      {
+        "Model": "RBF SVM",
+        "CV F1": 0.6981,
+        "Test Accuracy": 0.9583,
+        "Precision": 0.875,
+        "Recall": 0.6364,
+        "F1-score": 0.7368
+      },
+      {
+        "Model": "Decision Tree",
+        "CV F1": 0.6068,
+        "Test Accuracy": 0.95,
+        "Precision": 1.0,
+        "Recall": 0.4545,
+        "F1-score": 0.625
+      },
+      {
+        "Model": "Random Forest",
+        "CV F1": 0.6066,
+        "Test Accuracy": 0.9417,
+        "Precision": 0.8333,
+        "Recall": 0.4545,
+        "F1-score": 0.5882
+      },
+      {
+        "Model": "Baseline (never at risk)",
+        "CV F1": 0.0,
+        "Test Accuracy": 0.9083,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1-score": 0.0
+      }
+    ],
+    "n_train": 480,
+    "n_test": 120,
+    "pos_train": 44,
+    "pos_test": 11,
+    "confusion": [
+      [
+        107,
+        2
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "balanced": {
+      "best": "Linear SVM",
+      "results": [
+        {
+          "Model": "Linear SVM",
+          "CV F1": 0.6639,
+          "Test Accuracy": 0.9333,
+          "Precision": 0.5882,
+          "Recall": 0.9091,
+          "F1-score": 0.7143
+        },
+        {
+          "Model": "Random Forest",
+          "CV F1": 0.6615,
+          "Test Accuracy": 0.9667,
+          "Precision": 0.8182,
+          "Recall": 0.8182,
+          "F1-score": 0.8182
+        },
+        {
+          "Model": "Logistic Regression",
+          "CV F1": 0.6607,
+          "Test Accuracy": 0.95,
+          "Precision": 0.6923,
+          "Recall": 0.8182,
+          "F1-score": 0.75
+        },
+        {
+          "Model": "RBF SVM",
+          "CV F1": 0.6056,
+          "Test Accuracy": 0.9167,
+          "Precision": 0.5294,
+          "Recall": 0.8182,
+          "F1-score": 0.6429
+        },
+        {
+          "Model": "Decision Tree",
+          "CV F1": 0.5975,
+          "Test Accuracy": 0.9167,
+          "Precision": 0.5294,
+          "Recall": 0.8182,
+          "F1-score": 0.6429
+        },
+        {
+          "Model": "Baseline (never at risk)",
+          "CV F1": 0.0,
+          "Test Accuracy": 0.9083,
+          "Precision": 0.0,
+          "Recall": 0.0,
+          "F1-score": 0.0
+        }
+      ]
+    },
+    "stability": [
+      {
+        "Model": "Logistic Regression",
+        "F1-score (mean \u00b1 std)": "0.771 \u00b1 0.084",
+        "Recall (mean \u00b1 std)": "0.764 \u00b1 0.143",
+        "Precision (mean \u00b1 std)": "0.799 \u00b1 0.098"
+      },
+      {
+        "Model": "Linear SVM",
+        "F1-score (mean \u00b1 std)": "0.748 \u00b1 0.085",
+        "Recall (mean \u00b1 std)": "0.736 \u00b1 0.132",
+        "Precision (mean \u00b1 std)": "0.779 \u00b1 0.102"
+      },
+      {
+        "Model": "RBF SVM",
+        "F1-score (mean \u00b1 std)": "0.663 \u00b1 0.205",
+        "Recall (mean \u00b1 std)": "0.627 \u00b1 0.262",
+        "Precision (mean \u00b1 std)": "0.779 \u00b1 0.142"
+      },
+      {
+        "Model": "Random Forest",
+        "F1-score (mean \u00b1 std)": "0.657 \u00b1 0.134",
+        "Recall (mean \u00b1 std)": "0.536 \u00b1 0.168",
+        "Precision (mean \u00b1 std)": "0.915 \u00b1 0.100"
+      },
+      {
+        "Model": "Decision Tree",
+        "F1-score (mean \u00b1 std)": "0.605 \u00b1 0.085",
+        "Recall (mean \u00b1 std)": "0.627 \u00b1 0.090",
+        "Precision (mean \u00b1 std)": "0.605 \u00b1 0.159"
+      },
+      {
+        "Model": "Baseline (never at risk)",
+        "F1-score (mean \u00b1 std)": "0.000 \u00b1 0.000",
+        "Recall (mean \u00b1 std)": "0.000 \u00b1 0.000",
+        "Precision (mean \u00b1 std)": "0.000 \u00b1 0.000"
+      }
+    ]
+  },
+  "sensitivity": [
+    {
+      "Cut-off": 50,
+      "At-risk records": 12,
+      "Train / test positives": "10 / 2",
+      "Best model (CV F1)": "Decision Tree",
+      "CV F1": 0.3467,
+      "Test precision": 0.0,
+      "Test recall": 0.0,
+      "Test F1": 0.0,
+      "Accuracy": 0.9417,
+      "Baseline accuracy": 0.9833
+    },
+    {
+      "Cut-off": 55,
+      "At-risk records": 28,
+      "Train / test positives": "22 / 6",
+      "Best model (CV F1)": "Logistic Regression",
+      "CV F1": 0.6524,
+      "Test precision": 1.0,
+      "Test recall": 0.1667,
+      "Test F1": 0.2857,
+      "Accuracy": 0.9583,
+      "Baseline accuracy": 0.95
+    },
+    {
+      "Cut-off": 60,
+      "At-risk records": 55,
+      "Train / test positives": "44 / 11",
+      "Best model (CV F1)": "Logistic Regression",
+      "CV F1": 0.738,
+      "Test precision": 0.75,
+      "Test recall": 0.5455,
+      "Test F1": 0.6316,
+      "Accuracy": 0.9417,
+      "Baseline accuracy": 0.9083
+    },
+    {
+      "Cut-off": 65,
+      "At-risk records": 107,
+      "Train / test positives": "86 / 21",
+      "Best model (CV F1)": "Linear SVM",
+      "CV F1": 0.6718,
+      "Test precision": 0.875,
+      "Test recall": 0.6667,
+      "Test F1": 0.7568,
+      "Accuracy": 0.925,
+      "Baseline accuracy": 0.825
+    },
+    {
+      "Cut-off": 70,
+      "At-risk records": 159,
+      "Train / test positives": "127 / 32",
+      "Best model (CV F1)": "Linear SVM",
+      "CV F1": 0.8007,
+      "Test precision": 0.8065,
+      "Test recall": 0.7812,
+      "Test F1": 0.7937,
+      "Accuracy": 0.8917,
+      "Baseline accuracy": 0.7333
+    }
+  ],
+  "complexity": {
+    "regression": {
+      "best_depth": 4,
+      "curve": [
+        {
+          "max_depth": 1,
+          "Training score": 8.7275,
+          "Cross-validation score": 9.5843
+        },
+        {
+          "max_depth": 2,
+          "Training score": 7.0386,
+          "Cross-validation score": 7.8932
+        },
+        {
+          "max_depth": 3,
+          "Training score": 6.3335,
+          "Cross-validation score": 7.4866
+        },
+        {
+          "max_depth": 4,
+          "Training score": 5.4284,
+          "Cross-validation score": 7.1098
+        },
+        {
+          "max_depth": 5,
+          "Training score": 4.4139,
+          "Cross-validation score": 7.1675
+        },
+        {
+          "max_depth": 6,
+          "Training score": 3.4654,
+          "Cross-validation score": 7.3093
+        },
+        {
+          "max_depth": 7,
+          "Training score": 2.4771,
+          "Cross-validation score": 7.334
+        },
+        {
+          "max_depth": 8,
+          "Training score": 1.6054,
+          "Cross-validation score": 7.5731
+        },
+        {
+          "max_depth": 9,
+          "Training score": 0.9301,
+          "Cross-validation score": 7.6282
+        },
+        {
+          "max_depth": 10,
+          "Training score": 0.4995,
+          "Cross-validation score": 7.7083
+        },
+        {
+          "max_depth": 11,
+          "Training score": 0.227,
+          "Cross-validation score": 7.8297
+        },
+        {
+          "max_depth": 12,
+          "Training score": 0.089,
+          "Cross-validation score": 7.6202
+        },
+        {
+          "max_depth": 13,
+          "Training score": 0.0339,
+          "Cross-validation score": 7.7313
+        },
+        {
+          "max_depth": 14,
+          "Training score": 0.0122,
+          "Cross-validation score": 7.8673
+        },
+        {
+          "max_depth": 15,
+          "Training score": 0.0028,
+          "Cross-validation score": 7.6203
+        }
+      ]
+    },
+    "classification": {
+      "best_depth": 7,
+      "curve": [
+        {
+          "max_depth": 1,
+          "Training score": 0.0,
+          "Cross-validation score": 0.0
+        },
+        {
+          "max_depth": 2,
+          "Training score": 0.3805,
+          "Cross-validation score": 0.3171
+        },
+        {
+          "max_depth": 3,
+          "Training score": 0.7174,
+          "Cross-validation score": 0.479
+        },
+        {
+          "max_depth": 4,
+          "Training score": 0.7984,
+          "Cross-validation score": 0.5231
+        },
+        {
+          "max_depth": 5,
+          "Training score": 0.8974,
+          "Cross-validation score": 0.6068
+        },
+        {
+          "max_depth": 6,
+          "Training score": 0.966,
+          "Cross-validation score": 0.6026
+        },
+        {
+          "max_depth": 7,
+          "Training score": 0.9942,
+          "Cross-validation score": 0.6086
+        },
+        {
+          "max_depth": 8,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        },
+        {
+          "max_depth": 9,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        },
+        {
+          "max_depth": 10,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        },
+        {
+          "max_depth": 11,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        },
+        {
+          "max_depth": 12,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        },
+        {
+          "max_depth": 13,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        },
+        {
+          "max_depth": 14,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        },
+        {
+          "max_depth": 15,
+          "Training score": 1.0,
+          "Cross-validation score": 0.5953
+        }
+      ]
+    }
+  },
+  "tuning": {
+    "regression": {
+      "params": {
+        "max_depth": 8,
+        "n_estimators": 150
+      },
+      "cv": 5.67436688367103,
+      "test": {
+        "Test MAE": 5.26128304367697,
+        "Test RMSE": 6.820760039850086,
+        "Test R\u00b2": 0.7400457645148053
+      },
+      "n_candidates": 8
+    },
+    "classification": {
+      "params": {
+        "C": 1,
+        "kernel": "linear"
+      },
+      "cv": 0.7321309306448626,
+      "test": {
+        "Test Accuracy": 0.9416666666666667,
+        "Precision": 0.75,
+        "Recall": 0.5454545454545454,
+        "F1-score": 0.631578947368421
+      },
+      "n_candidates": 9
+    }
+  },
+  "importance": {
+    "regression": {
+      "study_hours": {
+        "Impurity importance": 0.3473,
+        "Permutation importance": 3.9069,
+        "Permutation std": 0.5328
+      },
+      "attendance_pct": {
+        "Impurity importance": 0.0968,
+        "Permutation importance": 0.9737,
+        "Permutation std": 0.1817
+      },
+      "previous_score": {
+        "Impurity importance": 0.3782,
+        "Permutation importance": 4.2436,
+        "Permutation std": 0.4603
+      },
+      "assignments_completed": {
+        "Impurity importance": 0.1003,
+        "Permutation importance": 1.1901,
+        "Permutation std": 0.1263
+      },
+      "sleep_hours": {
+        "Impurity importance": 0.0721,
+        "Permutation importance": 0.1269,
+        "Permutation std": 0.1407
+      },
+      "internet_access": {
+        "Impurity importance": 0.0053,
+        "Permutation importance": 0.0304,
+        "Permutation std": 0.0181
+      }
+    },
+    "classification": {
+      "study_hours": {
+        "Impurity importance": 0.2814,
+        "Permutation importance": 0.1906,
+        "Permutation std": 0.0536
+      },
+      "attendance_pct": {
+        "Impurity importance": 0.1748,
+        "Permutation importance": 0.0387,
+        "Permutation std": 0.0197
+      },
+      "previous_score": {
+        "Impurity importance": 0.2666,
+        "Permutation importance": 0.1115,
+        "Permutation std": 0.0441
+      },
+      "assignments_completed": {
+        "Impurity importance": 0.1294,
+        "Permutation importance": 0.0045,
+        "Permutation std": 0.0181
+      },
+      "sleep_hours": {
+        "Impurity importance": 0.1312,
+        "Permutation importance": -0.0038,
+        "Permutation std": 0.0102
+      },
+      "internet_access": {
+        "Impurity importance": 0.0166,
+        "Permutation importance": 0.0015,
+        "Permutation std": 0.0039
+      }
+    }
+  }
+}
